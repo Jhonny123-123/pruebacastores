@@ -2,12 +2,12 @@
 
 El proyecto fue echo con Angular para el frontend y Spring Boot para el backend.
 
-Ide frontend: WebStorm
-Ide backend: IntelliJ IDEA Ultimate
-Version de Java: 17
-Version de Angular: 19.1.7
-Version de Spring Boot: 3.4.2
-DBMS: MySQL 8
+- Ide frontend: WebStorm
+- Ide backend: IntelliJ IDEA Ultimate
+- Version de Java: 17
+- Version de Angular: 19.1.7
+- Version de Spring Boot: 3.4.2
+- DBMS: MySQL 8
 
 # Pasos para correr el proyecto
 - Clonar el repositorio front-end y [back-end](https://github.com/Jhonny123-123/pruebacastores-backend)
