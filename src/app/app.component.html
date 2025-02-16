@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+    <span>Prueba Castores</span>
+    <span class="spacer"></span>
+    <button *ngIf="usuario" mat-button (click)="logout()">Cerrar Sesión</button>
+    <nav mat-tab-nav-bar>
+        <a *ngIf="usuario?.idRol == rol.Administrador || usuario?.idRol == rol.Almacenista" mat-tab-link routerLink="/app/inventory" routerLinkActive #rlaHome="routerLinkActive"
+           [active]="rlaHome.isActive">
+            Inventario
+        </a>
+        <a *ngIf="usuario?.idRol == rol.Almacenista" mat-tab-link routerLink="/app/out-products" routerLinkActive #rlaAbout="routerLinkActive"
+           [active]="rlaAbout.isActive">
+            Salida de productos
+        </a>
+        <a *ngIf="usuario?.idRol == rol.Administrador" mat-tab-link routerLink="/app/record-products" routerLinkActive #rlaContact="routerLinkActive"
+           [active]="rlaContact.isActive">
+            Historial de Movimientos
+        </a>
+    </nav>
+</mat-toolbar>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

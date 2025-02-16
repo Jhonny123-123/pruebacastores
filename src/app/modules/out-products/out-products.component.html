@@ -1,0 +1,32 @@
+<div class="bg-light">
+  <div class="container py-5">
+    <div class="card shadow-lg">
+      <div class="card-header bg-primary text-white text-center">
+        <h2>Salida de Producto</h2>
+      </div>
+      <div class="card-body">
+        <table class="table table-bordered text-center">
+          <thead class="table-dark">
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Cantidad Disponible</th>
+            <th>Acciones</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let product of products">
+            <td>{{ product.idProductos }}</td>
+            <td>{{ product.nombre }}</td>
+            <td>{{product.cantidad}}</td>
+            <td>
+              <button *ngIf="product.estado == 1" class="btn btn-danger btn-sm" (click)="salida(product)">Salida</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>

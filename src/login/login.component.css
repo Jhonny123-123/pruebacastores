@@ -1,0 +1,39 @@
+.main {
+  background-color: #f5e6cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+.login-card {
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+}
+.icon-container {
+  font-size: 50px;
+  color: #343a40;
+  margin-bottom: 15px;
+}
+.form-control {
+  border-radius: 10px;
+}
+.btn-primary {
+  background-color: #6c5ce7;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #4b39b3;
+}
+.forgot-password {
+  margin-top: 10px;
+}
+.forgot-password a {
+  color: #6c5ce7;
+  text-decoration: none;
+}
+.forgot-password a:hover {
+  text-decoration: underline;
+}

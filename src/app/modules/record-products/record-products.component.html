@@ -1,0 +1,42 @@
+<div class="bg-light">
+  <div class="container py-5">
+    <div class="card shadow-lg">
+      <div class="card-header bg-primary text-white text-center">
+        <h2>Historial de Movimientos</h2>
+      </div>
+      <div class="card-body">
+        <div class="mb-3">
+          <label class="form-label">Filtrar por tipo de movimiento</label>
+          <select (change)="onChangeType($event)" class="form-select">
+            <option selected value="2">Todos</option>
+            <option value="1">Entrada</option>
+            <option value="0">Salida</option>
+          </select>
+        </div>
+        <table class="table table-bordered text-center">
+          <thead class="table-dark">
+          <tr>
+            <th>ID</th>
+            <th>Tipo de Movimiento</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Realizado Por</th>
+            <th>Fecha y Hora</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let historial of historialDetalle">
+            <td>{{  historial.idHistorial }}</td>
+            <td [ngClass]="historial.tipo == 1 ? 'text-success' : 'text-danger'">{{historial.tipo == 1 ? "Entrada" : "Salida"}}</td>
+            <td>{{historial.nombreProductos}}</td>
+            <td>{{historial.cantidad}}</td>
+            <td>{{historial.nombreUsuario}}</td>
+            <td>{{historial.fechaHora}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>

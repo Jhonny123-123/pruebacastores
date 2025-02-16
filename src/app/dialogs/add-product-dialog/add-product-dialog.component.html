@@ -1,0 +1,27 @@
+<!-- Dialog para agregar producto con boostrap -->
+<div class="modal-header p-4">
+  <h4 class="modal-title">Agregar Producto</h4>
+</div>
+<div class="modal-body p-4">
+  <form [formGroup]="addProductForm">
+    <div class="form-group">
+      <label for="name">Nombre</label>
+      <input type="text" class="form-control" formControlName="name" id="name" required>
+    </div>
+    <div class="form-group">
+      <label for="quantity">Cantidad</label>
+      <input type="number" class="form-control" id="quantity" value="0" disabled>
+    </div>
+    <div class="form-group">
+      <label for="status">Estado</label>
+      <select class="form-control" id="status" disabled>
+        <option selected value="Activo">Activo</option>
+        <option value="Inactivo">Inactivo</option>
+      </select>
+    </div>
+  </form>
+  <div class="mt-1">
+    <button class="btn btn-primary m-1" (click)="save()">Agregar</button>
+    <button class="btn btn-secondary m-1" (click)="close()">Cancelar</button>
+  </div>
+</div>

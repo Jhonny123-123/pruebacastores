@@ -1,0 +1,45 @@
+<div class="bg-light">
+  <div class="container py-5">
+    <div class="card shadow-lg">
+      <div class="card-header bg-primary text-white text-center">
+        <h2>Inventario</h2>
+      </div>
+      <div class="card-body">
+        <div class="mb-3">
+          <label class="form-label">Filtrar por tipo de movimiento</label>
+          <select (change)="onTypeChange($event)" class="form-select">
+            <option selected value="1">Activos</option>
+            <option value="0">Inactivos</option>
+            <option value="2">Todos</option>
+          </select>
+        </div>
+        <button *ngIf="usuario?.idRol == rol.Administrador" class="btn btn-success mb-3" (click)="openDialogAddProduct()">Agregar Producto</button>
+        <table class="table table-bordered text-center">
+          <thead class="table-dark">
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Estado</th>
+            <th *ngIf="usuario?.idRol == rol.Administrador">Acciones</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let product of products">
+            <td>{{ product.idProductos }}</td>
+            <td>{{ product.nombre }}</td>
+            <td>{{product.cantidad}}</td>
+            <td [ngClass]="product.estado == 1 ? 'text-success' : 'text-danger'">{{ product.estado == 1 ? 'Activo' : 'Inactivo' }}</td>
+            <td *ngIf="usuario?.idRol == rol.Administrador">
+              <button *ngIf="product.estado == 1" class="btn btn-primary btn-sm" (click)="entrada(product)">Entrada</button>
+              <button *ngIf="product.estado == 1" class="btn btn-danger btn-sm" (click)="baja(product)">Baja</button>
+              <button *ngIf="product.estado == 0" class="btn btn-success btn-sm" (click)="alta(product)">Alta</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
