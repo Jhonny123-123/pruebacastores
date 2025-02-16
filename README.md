@@ -10,7 +10,7 @@ Version de Spring Boot: 3.4.2
 DBMS: MySQL 8
 
 # Pasos para correr el proyecto
-- Clonar el repositorio front-end y [back-end](https://github.com/)
+- Clonar el repositorio front-end y [back-end](https://github.com/Jhonny123-123/pruebacastores-backend)
 - Ejecutar el script de la base de datos que se encuentra en la carpeta `documentos` llamado [database.sql](documentos/database.sql).
 - Configurar el archivo `application.yml` del repositorio del backend con los datos de acceso a la base de datos.
 - Correr el backend con el comando `mvnw spring-boot:run`.
